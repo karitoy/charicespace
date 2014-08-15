@@ -69,14 +69,14 @@
 					<%= link_to_unless_current "Playlists", 		:controller=>"site", :action=>"playlists" %> 
 				<% end %>
 			</nav>
-			<section id="mainwindow"><!--div id="mainwindow"-->
+			<section id="mainwindow">
 				<div id="columnleft">
           <%= render 'layouts/columnleft' %>
 				</div>
 				<div id="columnright">
 					<%= yield %>
 				</div>
-			</section><!--/div-->
+			</section>
 			<footer>
 				<div id="myfoot">&copy; Copyright, copyleft and copywrong 2008 <a href="http://karitoy.herokuapp.com">Karitoy Online</a></div>
 			</footer>

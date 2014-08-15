@@ -1,2 +1,41 @@
-<h1>Site#events</h1>
-<p>Find me in app/views/site/events.html.erb</p>
+<script language="javascript">
+	so.addParam('flashvars','&file=/assets/charicehitman.flv&autostart=true&skin=/assets/stylish/stylish.swf');
+	so.write('theplayer');
+</script>
+<div id="title"><%= @title %></div>
+<table class="schedule">
+	<tr class="tableheading">
+		<td class="tablecol">YYYY-MM-DD</td>
+		<td class="tablecol">Event</td>
+		<td class="tablecol">Location</td>
+		<td class="tablecol">Remarks</td>
+		<% if logged_in? %>
+		<td class="tablecol">Action</td>
+		<% end %>
+	</tr>
+	<% @events.each do |event| %>
+		<tr class="schedulerow">
+			<td class="tablecol"><%= event.event_date %></td>
+			<td class="tablecol"><%= event.occasion %></td>
+			<td class="tablecol"><%= event.location %></td>
+			<td class="tablecol"><%= event.remarks %></td>
+			<% if logged_in? %>
+			<td class="tablecol">
+				<%= link_to "edit", :action=>"update", :controller=>"event" %><br />
+				<%= link_to "delete", :action=>"delete", :controller=>"event" %>
+			</td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>
+<br />
+<% unless logged_in? %>
+	<div class="floatleft">
+		<i>To add or edit an entry, please <%= link_to "log in", :action=>"login", :controller=>"site" %></i>
+	</div>
+<% end %>
+<% if logged_in? %>
+	<%= link_to "Add a new event", :action=>"create", :controller=>"event" %>
+<% end %>
+<br clear="all"/><br />
+

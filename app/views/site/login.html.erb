@@ -1,2 +1,18 @@
-<h1>Site#login</h1>
-<p>Find me in app/views/site/login.html.erb</p>
+<div id="inputpage">
+	<div id="title"><%= @title %></div>
+	<p><i>Please login to have full access</i></p>
+	<%= form_for :user do |form| %>
+		<fieldset>
+			<legend>Enter login details</legend>
+			<%= render :partial=>"text_field", 			:locals=>{:form=>form, :field=>"email", 		:title=>"Email:"} %>
+			<%= render :partial=>"password_field", 	:locals=>{:form=>form, :field=>"password", 	:title=>"Password:"} %>
+			<div class="label">Remember me?</div><%= form.check_box :rememberme %><br />
+			<%= form.submit "Login", :class=>"submit" %><br />
+		</fieldset>
+	<% end %>
+	<h3>Not registered yet? <%= link_to "Register now!", :action=>"register" %></h3>
+	<% if flash[:notice] %>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end %>
+</div>
+

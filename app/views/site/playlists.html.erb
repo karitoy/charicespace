@@ -1,2 +1,31 @@
-<h1>Site#playlists</h1>
-<p>Find me in app/views/site/playlists.html.erb</p>
+<div id="title"><%= @title %></div>
+<div id="playlists">
+		<div class="playitem">
+			<div class="playthumb" onclick="return playUserList('dream.xspf');" /><%= image_tag("dream.jpg") %></div>
+			<div class="playtitle">Dream Come True + Dream Duet of a Lifetime</div>
+			<div class="playcaption">Dream Come True episode at Oprah's show, September 9, 2008, plus the dream duet with Celine Dion at Madison Square Garden, September 15, 2008</div>
+		</div>
+		<div class="playitem">
+			<div class="playthumb" onclick="return playUserList('gma.xspf');" /><%= image_tag("gma.jpg") %></div>
+			<div class="playtitle">Guesting at Good Morning America</div>
+			<div class="playcaption">Charice's guesting with David Foster in Good Morning America (ABC), New York, November 18, 2008</div>
+		</div>
+		<div class="playitem">
+			<div class="playthumb" onclick="return playUserList('tluc1.xspf');" /><%= image_tag("tluc1.jpg") %></div>
+			<div class="playtitle">Ti Lascio Una Canzone (I Leave You With A Song) - First Guesting</div>
+			<div class="playcaption">Charice's first guesting at the popular Rai TV singing competition in Sanremo, Italy, April 4, 2009</div>
+		</div>
+		<div class="playitem">
+			<div class="playthumb" onclick="return playUserList('tluc2.xspf');" /><%= image_tag("tluc2.jpg") %></div>
+			<div class="playtitle">Ti Lascio Una Canzone (I Leave You With A Song) - Finale</div>
+			<div class="playcaption">Charice's second guesting (finale episode) at the popular Rai TV singing competition in Sanremo, Italy, May 23, 2009</div>
+		</div>
+		<div class="playitem">
+			<div class="playthumb" onclick="return playUserList('tluc3.xspf');" /><%= image_tag("tluc3.jpg") %></div>
+			<div class="playtitle">Ti Lascio Una Canzone (I Leave You With A Song) - Gala</div>
+			<div class="playcaption">Charice's third guesting (gala episode) at the popular Rai TV singing competition in Sanremo, Italy, May 30, 2009</div>
+		</div>
+	<br clear="all" />
+</div>
+
+

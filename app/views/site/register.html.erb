@@ -1,2 +1,30 @@
-<h1>Site#register</h1>
-<p>Find me in app/views/site/register.html.erb</p>
+<div id="inputpage">
+	<div id="title"><%= @title %></div>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<%= form_for :user, :url=>{:action=>"register"}, :html=>{:multipart=>true} do |form| %>
+		<fieldset>
+			<legend>Enter your account details</legend>
+			<%= render :partial=>"text_field", 			:locals=>{:form=>form, :field=>"email", 								:title=>"* Email:" } %>
+    	<%= render :partial=>"text_field",			:locals=>{:form=>form, :field=>"email_confirmation", 		:title=>"* Confirm Email:" } %>
+			<%= render :partial=>"password_field",	:locals=>{:form=>form, :field=>"password", 							:title=>"* Password:"} %>
+			<%= render :partial=>"password_field", 	:locals=>{:form=>form, :field=>"password_confirmation", :title=>"* Confirm Password:"} %>
+			<%= render :partial=>"text_field", 			:locals=>{:form=>form, :field=>"firstname", 						:title=>"First name:"} %>
+			<%= render :partial=>"text_field", 			:locals=>{:form=>form, :field=>"lastname", 							:title=>"Last name:"} %>
+			<label for="avatar">Your photo/avatar:</label> <%= file_field :user, :avatar, :size=>29 %>
+			<%= form.submit "Register now!", 				:class=>"submit" %><br /><br />
+			* Only fields marked with asterisks are required
+		</fieldset>
+	<% end %>
+	<h3>Already registered? <%= link_to "Login now!", :action=>"login" %></h3>
+	<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+</div>
+

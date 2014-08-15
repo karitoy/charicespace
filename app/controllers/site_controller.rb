@@ -16,7 +16,7 @@ class SiteController < ApplicationController
 
   def events
   	@title = "Charice's schedule of appearances and events"
-  	@events = Event.order("event_date desc")
+  	@events = Event.order("created_at desc")
   	@videos = Video.order("created_at desc")
   end
 
@@ -37,6 +37,7 @@ class SiteController < ApplicationController
     @title = "Register for full access"
   	@videos = Video.order("created_at desc")
     @countries = Country.order("country")
+    @user = User.new
     if request.post? and params[:user]
   		image = params[:user][:avatar]
       @user = User.new(params[:user])
@@ -59,11 +60,12 @@ class SiteController < ApplicationController
   def login
     @title = "Please login"
   	@videos = Video.order("created_at desc")
+  	@user = User.new
     if request.get?
       @user = User.new( :rememberme=>cookies[:rememberme] || "0" )
     elsif request.post? and params[:user]
       @user = User.new(params[:user])
-      user = User.find_by_uname_and_pword(@user.uname, @user.pword)
+      user = User.find_by_email_and_password(@user.email, @user.password)
       if user
         user.login!(session)
         @user.remember? ? user.remember!(cookies) : user.forget!(cookies)

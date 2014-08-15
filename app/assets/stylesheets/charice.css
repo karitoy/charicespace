@@ -12,12 +12,20 @@ html body
 
 html a:link
 {
-  color: aqua; /* same as cyan */
+	color: cyan; 
+	text-decoration: none;
+	background-color: #38a;
 }
 
 html a:visited
 {
   color: lime; /* same as lawngreen */
+}
+
+html a:hover
+{
+	color: white;
+	background-color: #378;
 }
 
 .round
@@ -56,7 +64,6 @@ html header /*#banner*/
 	font-size: 1em;
 	font-weight: bold;
 	padding-left: 10px;
-	/**/adding-bottom: 5px;
 }
 
 
@@ -69,24 +76,9 @@ html header /*#banner*/
 	margin: 0;
 }
 
-/*
-html nav a
-{
-	color: cyan;
-	font-weight: bold;
-	text-decoration: none;
-	background-color: #367;
-}
-
-html nav a:hover
-{
-	color: white;
-	background-color: #367;
-}
-*/
-
 #menu a
 {
+	background-color: #367;
 	color: cyan;
 	font-size: 1em;
 	font-weight: bold;
@@ -115,7 +107,11 @@ html nav a:hover
 }
 
 #mainwindow #columnleft a 
-{	color: cyan; }
+{	
+	color: cyan; 
+	text-decoration: none;
+	background-color: #367;
+}
 
 #mainwindow #columnright
 {
@@ -126,6 +122,26 @@ html nav a:hover
 	padding: 0 5px;
   margin: 0;
   color: white;
+}
+
+#mainwindow #columnright .leftcol
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+#mainwindow #columnright .rightcol
+{
+	text-align: justify;
+	vertical-align: top;
+}
+
+
+#mainwindow #columnright a 
+{	
+	color: cyan; 
+	text-decoration: none;
+	background-color: #367;
 }
 
 #title
@@ -159,6 +175,7 @@ html nav a:hover
 	background-color: #3bc;
 	margin-bottom: 5px;
 	padding: 5px;
+	line-height: 1.1;
 }
 
 /***********************
