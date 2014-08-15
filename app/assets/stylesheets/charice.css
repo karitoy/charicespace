@@ -1,4 +1,5 @@
-body
+
+html body
 {
 	font-family: Arial, Helvetica, Sans-serif;
 	font-size: .8em;
@@ -9,12 +10,12 @@ body
 	background-color: black;
 }
 
-a:link
+html a:link
 {
   color: aqua; /* same as cyan */
 }
 
-a:visited
+html a:visited
 {
   color: lime; /* same as lawngreen */
 }
@@ -29,24 +30,24 @@ a:visited
 #whole_page
 {
 	width: 1024px;
-	height: 655px;
+	height: 635px;
 	margin: 30px auto 0 auto;
 	padding: 0;
 	text-align: justify;
 	background-color: #38a;
 }
 
-#banner
+html header /*#banner*/
 {
 	padding: 5px 5px;
-	font-weight: bold;
 }
 
 #banner_heading
 {
 	font-size: 2em;
 	font-weight: bold;
-	padding-left: 10px;
+	color: black;
+	padding: 10px 10px 5px 10px;
 }
 
 #banner_caption
@@ -55,16 +56,34 @@ a:visited
 	font-size: 1em;
 	font-weight: bold;
 	padding-left: 10px;
-	padding-bottom: 5px;
+	/**/adding-bottom: 5px;
 }
+
 
 #menu
 {
 	background-color: #367;
 	font-weight: bold;
+	color: white;
 	padding: 5px 15px;
 	margin: 0;
 }
+
+/*
+html nav a
+{
+	color: cyan;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #367;
+}
+
+html nav a:hover
+{
+	color: white;
+	background-color: #367;
+}
+*/
 
 #menu a
 {
@@ -74,14 +93,39 @@ a:visited
 	text-decoration: none;
 }
 
-a:hover
-{
-	border-bottom: 1px solid #555;
-}
-
 #menu a:hover
 {
-	color: navy;
+	color: white;
+	background-color: #367;
+}
+
+
+#mainwindow
+{
+	margin: 15px;
+	height: 470px;
+}
+
+#mainwindow #columnleft
+{
+	float: left;
+	width: 380px;
+	padding: 0px;
+  margin: 0;
+}
+
+#mainwindow #columnleft a 
+{	color: cyan; }
+
+#mainwindow #columnright
+{
+	float: right;
+	width: 590px;
+	height: 472px;
+	overflow: auto;
+	padding: 0 5px;
+  margin: 0;
+  color: white;
 }
 
 #title
@@ -92,33 +136,7 @@ a:hover
 	padding-bottom: 5px;
 	margin-top: 0;
 	margin-bottom: 10px;
-	border-bottom: 1px solid white;
 }
-
-#content
-{
-	height: 500px;
-	padding: 15px;
-}
-
-#columnleft
-{
-	float: left;
-	width: 380px;
-	height: 500px;
-}
-
-#columnright
-{
-	float: right;
-	width: 590px;
-	height: 500px;
-	overflow: auto;
-	padding: 0 5px;
-  margin: 0;
-}
-
-#columnleft a {	color: cyan; }
 
 #theplayer
 {
@@ -129,8 +147,10 @@ a:hover
 
 #playlist
 {
-	height: 270px;
+	height: 205px;
 	overflow: auto;
+	padding: 0px;
+	margin: 0px;
 }
 
 .playitem
@@ -272,7 +292,6 @@ a:hover
 	height: 95px;
 	margin: 11px 11px 0 0;
 	padding: 8px 2px 0 2px;
-	font-size: 10px;
 	text-align: center;
 	background-color: #3ab;
 }
@@ -295,9 +314,9 @@ a:hover
 {
 	width: 100%;
 	height: 45px;
-	/*height: 27px;*/
+	font-size: 10px;
 	font-weight: bold;
-	/*white-space: nowrap;*/
+	line-height: 1.2;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -431,13 +450,12 @@ html label
 
 #indexwelcome
 {
-	/*border: 4px solid silver;*/
-	/*background-color: white;*/
-	height: 500px;
-	padding: 0;
-  font-size: 18px;
-  font-style: italic;
+	/*height: 500px;*/
+  font-size: 10em;
+  font-style: none;
 	text-align: justify;
+	padding: 0px;
+	margin: 0px;
 }
 
 #chariceimg
@@ -457,12 +475,26 @@ html label
 	border-bottom: 2px solid silver;
 }
 
-#footer
+html footer
 {
 	clear: both;
 	padding: 5px;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
+  color: white;
 	background-color: #367;
+}
+
+html footer #myfoot a
+{
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #367;
+	color: cyan;
+}
+
+html footer #myfoot a:hover
+{
+	color: white;
 }
 

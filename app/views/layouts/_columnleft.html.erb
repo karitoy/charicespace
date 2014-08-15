@@ -1,4 +1,8 @@
 <div id="theplayer"></div>
+<script language="javascript">
+	so.addParam('flashvars','file=/assets/chariceitaly.flv&autostart=true&skin=/assets/stylish/stylish.swf');
+	so.write('theplayer');
+</script>
 <div id="playlist">
 	<div class="videoitem">
 		<div class="videothumb">
@@ -48,12 +52,13 @@
 		</div>
 		<div class="videotitle">O Holy Night with school choir</div>
 	</div>
+	
 	<br clear="all" />
 </div>
 
 
 
-<!--div id="playlist">
+<!--div id="playlist"-->
 	<% unless @videos.nil? %>
 		<% @videos.each do |video| %>
 			<div class="videoitem">
@@ -68,5 +73,4 @@
 			</div>
 		<% end %>
 	<% end %>
-	<br clear="all" />
-</div-->
+<!--/div-->

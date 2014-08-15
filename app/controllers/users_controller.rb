@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:events, :blogs, :show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -7,6 +7,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+	def events
+	end
+	
+	def blogs
+	end
+	
   # GET /users/1
   # GET /users/1.json
   def show
@@ -36,7 +42,7 @@ class UsersController < ApplicationController
       end
     end
   end
-
+	
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

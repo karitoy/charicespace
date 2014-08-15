@@ -5,22 +5,58 @@
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
+		<script type="text/javascript">
+			var so = new SWFObject('/assets/player.swf','player','380','255','9');
+			so.addParam('allowscriptaccess','always');
+			so.addParam('allowfullscreen','true');
+		
+			function playVideo(video)
+			{
+				var flashvars = "file=/assets/" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
+				so.addParam('flashvars',flashvars);
+				so.write('theplayer');
+				return false;
+			}
+
+			function playUserVideo(video)
+			{
+				var flashvars = "file=" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
+				so.addParam('flashvars',flashvars);
+				so.write('theplayer');
+				return false;
+			}
+
+			function playUserList(list)
+			{
+				var flashvars = "type=playlist&repeat=list&file=/assets/" + list + "&autostart=true&skin=/assets/stylish/stylish.swf"
+				so.addParam('flashvars',flashvars);
+				so.write('theplayer');
+				return false;
+			}
+
+			function showVideo(flashvars)
+			{
+				so.addParam('flashvars',flashvars);
+				so.write('theplayer');
+				return false;
+			}
+		</script>	
 	</head>
 	<body>
 		<!--% = calendar_date_select_includes "blue" % -->
 		<div id="whole_page" class="round">
-			<div id="banner">
+			<header><!--div id="banner"-->
 				<div id="banner_heading">ChariceSpace</div>
 				<div id="banner_caption">An unauthorized scrapbook of the Youtube singing sensation</div>
-			</div>
-			<div id="menu">
+			</header><!--/div-->
+			<nav id="menu">
 				<% if logged_in? %>
 					<div style="float: right">
-						<%= link_to_unless_current "Logout",	:controller=>"user", :action=>"logout" %> 
+						<%= link_to_unless_current "Logout",	:controller=>"users", :action=>"logout" %> 
 					</div>
-					<%= link_to_unless_current "My home",		:controller=>"user", :action=>"index" %> |
-					<%= link_to_unless_current "Events", 		:controller=>"user", :action=>"events" %> |
-					<%= link_to_unless_current "Blogs", 		:controller=>"user", :action=>"blogs" %> 
+					<%= link_to_unless_current "My home",		:controller=>"users", :action=>"index" %> |
+					<%= link_to_unless_current "Events", 		:controller=>"users", :action=>"events" %> |
+					<%= link_to_unless_current "Blogs", 		:controller=>"users", :action=>"blogs" %> 
 				<% else %>
 					<div style="float: right">
 						<%= link_to_unless_current "Register", 	:controller=>"site", :action=>"register" %> |
@@ -32,54 +68,18 @@
 					<%= link_to_unless_current "Events", 				:controller=>"site", :action=>"events" %> |
 					<%= link_to_unless_current "Playlists", 		:controller=>"site", :action=>"playlists" %> 
 				<% end %>
-			</div>
-			<div id="content">
-				<script type="text/javascript">
-					var so = new SWFObject('/assets/player.swf','player','380','255','9');
-					so.addParam('allowscriptaccess','always');
-					so.addParam('allowfullscreen','true');
-				
-					function playVideo(video)
-					{
-						var flashvars = "file=/assets/" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
-						so.addParam('flashvars',flashvars);
-						so.write('theplayer');
-            return false;
-					}
-
-					function playUserVideo(video)
-					{
-						var flashvars = "file=" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
-						so.addParam('flashvars',flashvars);
-						so.write('theplayer');
-            return false;
-					}
-
-					function playUserList(list)
-					{
-						var flashvars = "type=playlist&repeat=list&file=/assets/" + list + "&autostart=true&skin=/assets/stylish/stylish.swf"
-						so.addParam('flashvars',flashvars);
-						so.write('theplayer');
-            return false;
-					}
-
-					function showVideo(flashvars)
-					{
-						so.addParam('flashvars',flashvars);
-						so.write('theplayer');
-            return false;
-					}
-				</script>	
+			</nav>
+			<section id="mainwindow"><!--div id="mainwindow"-->
 				<div id="columnleft">
           <%= render 'layouts/columnleft' %>
 				</div>
 				<div id="columnright">
 					<%= yield %>
 				</div>
-			</div>
-			<div id="footer">
-				<div>&copy; Copyright, copyleft and copywrong 2008 <a href="http://karitoy.herokuapp.com">Karitoy Online</a>.</div>
-			</div>
+			</section><!--/div-->
+			<footer>
+				<div id="myfoot">&copy; Copyright, copyleft and copywrong 2008 <a href="http://karitoy.herokuapp.com">Karitoy Online</a></div>
+			</footer>
 		</div>
 	</body>
 </html>
