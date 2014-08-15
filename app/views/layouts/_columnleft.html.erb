@@ -1,0 +1,72 @@
+<div id="theplayer"></div>
+<div id="playlist">
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("allbymyself.jpg", onclick: "playUserVideo('/assets/allbymyself.flv');") %>
+		</div>
+		<div class="videotitle">All By Myself - Hitman Returns (DVD version)</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("rockefeller.jpg", onclick: "playUserVideo('/assets/rockefeller.flv');") %>
+		</div>
+		<div class="videotitle">Christmas at the Rockefeller Center</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("drphil.jpg", onclick: "playUserVideo('/assets/drphil.flv');") %>
+		</div>
+		<div class="videotitle">One Moment In Time - Dr. Phil Show</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("iwillsurvive.jpg", onclick: "playUserVideo('/assets/iwillsurvive.flv');") %>
+		</div>
+		<div class="videotitle">I Will Survive - Good Morning America</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("pyramid.jpg", onclick: "playUserVideo('/assets/pyramid.flv');") %>
+		</div>
+		<div class="videotitle">Pyramid - music video</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("ogrady2.jpg", onclick: "playUserVideo('/assets/kari_0011.flv');") %>
+		</div>
+		<div class="videotitle">Second song at Paul O'Grady's</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("dodgers.jpg", onclick: "playUserVideo('/assets/kari_0010.flv');") %>
+		</div>
+		<div class="videotitle">Star-Spangled Banner - Dodgers</div>
+	</div>
+	<div class="videoitem">
+		<div class="videothumb">
+			<%= image_tag("oholynight.jpg", onclick: "playUserVideo('/assets/kari_0001.flv');") %>
+		</div>
+		<div class="videotitle">O Holy Night with school choir</div>
+	</div>
+	<br clear="all" />
+</div>
+
+
+
+<!--div id="playlist">
+	<% unless @videos.nil? %>
+		<% @videos.each do |video| %>
+			<div class="videoitem">
+				<div class="videothumb">
+					<% if logged_in? %>
+						<%= link_to image_tag(video.thumbnail), :action=>"show_video", :controller=>"user", :id=>video %>
+					<% else %>
+						<img src="<%= video.thumbnail %>", onclick: "playUserVideo('<%= video.filename %>');") %>
+					<% end %>
+				</div>
+				<div class="videotitle"><%= video.video_title %></div>
+			</div>
+		<% end %>
+	<% end %>
+	<br clear="all" />
+</div-->

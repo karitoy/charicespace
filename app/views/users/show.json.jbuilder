@@ -1,0 +1,1 @@
+json.extract! @user, :id, :firstname, :lastname, :email, :password, :avatar, :street, :city, :country, :birthday, :birthcity, :birthcountry, :videonumber, :lastcomment, :lastpost, :aboutme, :authorization_token, :created_at, :updated_at

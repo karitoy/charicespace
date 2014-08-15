@@ -1,0 +1,7 @@
+== Welcome to ChariceSpace
+
+This site is all about Charice, the little Asian girl with a big voice.
+
+I was doing the RailsSpace book when it dawned on me that I could use the project for a site for Charice, hence this site.
+
+Thanks for visiting!

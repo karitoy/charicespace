@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  when: 2014-08-14
+  where: MyString
+  what: MyString
+  remarks: MyString
+
+two:
+  when: 2014-08-14
+  where: MyString
+  what: MyString
+  remarks: MyString

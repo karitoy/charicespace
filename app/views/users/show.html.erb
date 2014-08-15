@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @user.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @user.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @user.avatar %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @user.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @user.country %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Birthcity:</strong>
+  <%= @user.birthcity %>
+</p>
+
+<p>
+  <strong>Birthcountry:</strong>
+  <%= @user.birthcountry %>
+</p>
+
+<p>
+  <strong>Videonumber:</strong>
+  <%= @user.videonumber %>
+</p>
+
+<p>
+  <strong>Lastcomment:</strong>
+  <%= @user.lastcomment %>
+</p>
+
+<p>
+  <strong>Lastpost:</strong>
+  <%= @user.lastpost %>
+</p>
+
+<p>
+  <strong>Aboutme:</strong>
+  <%= @user.aboutme %>
+</p>
+
+<p>
+  <strong>Authorization token:</strong>
+  <%= @user.authorization_token %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
