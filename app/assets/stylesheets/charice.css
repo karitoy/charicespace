@@ -1,0 +1,468 @@
+body
+{
+	font-family: Arial, Helvetica, Sans-serif;
+	font-size: .8em;
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+a:link
+{
+  color: aqua; /* same as cyan */
+}
+
+a:visited
+{
+  color: lime; /* same as lawngreen */
+}
+
+.round
+{
+	-moz-border-radius: 10 px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#whole_page
+{
+	width: 1024px;
+	height: 655px;
+	margin: 30px auto 0 auto;
+	padding: 0;
+	text-align: justify;
+	background-color: #38a;
+}
+
+#banner
+{
+	padding: 5px 5px;
+	font-weight: bold;
+}
+
+#banner_heading
+{
+	font-size: 2em;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#banner_caption
+{
+	color: cyan;
+	font-size: 1em;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+#menu
+{
+	background-color: #367;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0;
+}
+
+#menu a
+{
+	color: cyan;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover
+{
+	border-bottom: 1px solid #555;
+}
+
+#menu a:hover
+{
+	color: navy;
+}
+
+#title
+{
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 0;
+	padding-bottom: 5px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid white;
+}
+
+#content
+{
+	height: 500px;
+	padding: 15px;
+}
+
+#columnleft
+{
+	float: left;
+	width: 380px;
+	height: 500px;
+}
+
+#columnright
+{
+	float: right;
+	width: 590px;
+	height: 500px;
+	overflow: auto;
+	padding: 0 5px;
+  margin: 0;
+}
+
+#columnleft a {	color: cyan; }
+
+#theplayer
+{
+	width: auto;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+#playlist
+{
+	height: 270px;
+	overflow: auto;
+}
+
+.playitem
+{
+	height: 45px;
+	background-color: #3bc;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+/***********************
+.playitem
+{
+	width: 378px;
+	height: 64px;
+	background-color: #3bc;
+	margin-bottom: 5px;
+	padding: 2px 0 2px 2px;
+}
+*/
+
+.playthumb img
+{
+	float: left;
+	width: 60px;
+	height: 40px;
+	margin: 1px 6px 1px 1px;
+	border: 1px solid white;
+}
+
+.playthumb img:hover
+{
+	border: 1px solid magenta;
+}
+
+.playtitle
+{
+	/*float: left;*/
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.playcaption
+{
+	/*float: left;*/
+	white-space: wrap;
+}
+
+  
+.thumbnail img
+{
+	clear: left;
+	float: left;
+	width: 60px;
+	height: 40px;
+	margin: 1px 10px 1px 1px;
+	border: 1px solid white;
+}
+
+.thumbnail img:hover
+{
+	border: 1px solid magenta;
+}
+
+#commentas
+{
+	/*width: 370px;*/
+	height: 400px;
+	margin-top: 5px;
+	/*padding: 5px;*/
+}
+
+#commentaryo
+{
+	height: 240px;
+	margin: 0;
+	overflow: auto;
+}
+
+.comment
+{
+	margin-top: 3px;
+	padding: 0 5px 3px 5px;
+	border-bottom: 1px dotted silver;
+}
+
+#pageinfo
+{
+	background-color: silver;
+	width: 440px;
+	padding: 5px 10px;
+}
+
+.gallerytitle
+{
+	margin-top: 5px;
+	border-bottom: 1px solid silver;
+}
+
+#collection
+{
+	background-color: silver;
+	width: 480px;
+	padding: 10px;
+}
+
+.collitem
+{
+	float: left;
+	width: 80px;
+	height: 70px;
+	margin-top: 5px;
+	padding: 8px 2px 0 2px;
+	overflow: hidden;
+	font-size: 10px;
+	text-align: center;
+}
+
+.collthumb img
+{
+	width: 60px;
+	height: 40px;
+	margin-bottom: 2px;
+	border: 1px solid silver;
+}
+
+.collthumb img:hover
+{
+	border: 1px solid magenta;
+	text-decoration: none;
+}
+
+.videoitem
+{
+	float: left;
+	width: 75px;
+	height: 95px;
+	margin: 11px 11px 0 0;
+	padding: 8px 2px 0 2px;
+	font-size: 10px;
+	text-align: center;
+	background-color: #3ab;
+}
+
+.videothumb img
+{
+	width: 60px;
+	height: 42px;
+	margin-bottom: 2px;
+	border: 1px solid silver;
+}
+
+.videothumb img:hover
+{
+	border: 1px solid magenta;
+	text-decoration: none;
+}
+
+.videotitle
+{
+	width: 100%;
+	height: 45px;
+	/*height: 27px;*/
+	font-weight: bold;
+	/*white-space: nowrap;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.videoposter
+{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.itemtitle
+{
+	font-weight: bold;
+}
+
+#inputpage
+{
+	margin: 0;
+}
+
+html fieldset
+{
+	padding: 20px;
+}
+
+html legend
+{
+	padding: 2px 7px;
+	margin: 0 5px;
+	background-color: maroon;
+	color: #ddd;
+	font-weight: bold;
+}
+
+html label
+{
+	clear: left;
+	float: left;
+	width: 150px;
+	text-align:right;
+	padding-right: 5px;
+}
+
+.submit
+{
+	margin-left: 155px;
+	width: 345px;
+}
+
+.label
+{
+	clear: left;
+	float: left;
+	text-align: right;
+	width: 10em;
+}
+
+#errors
+{
+	margin: 20px 0;
+	padding: 0 20px;
+	border: 1px solid maroon;
+}
+
+#profile
+{
+	margin-top: 5px;
+	/*padding: 15px;*/
+	/*border: 1px solid silver;*/
+}
+
+#profile img
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.floatright
+{
+	float: right; 
+	padding: 0; 
+	margin: 0;
+}
+
+#floatleft
+{
+	float: left; 
+	padding: 0; 
+	margin: 0;
+}
+
+.schedule
+{
+	width: 100%;
+	padding: 0;
+	border-collapse: separate;
+	border-spacing: 3px;
+}
+
+.schedulerow
+{
+}
+
+.tablecol
+{
+	background-color: #3bc;
+	color: white;
+	padding: 0 3px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.tablelabel
+{
+	color: white;
+	padding: 0 3px;
+	vertical-align: top;
+	text-align: right;
+}
+
+.tableheading
+{
+	border-bottom: 1px dotted silver;
+	font-weight: bold;
+}
+
+.country
+{
+	width: 345px;
+}
+
+#indexwelcome
+{
+	/*border: 4px solid silver;*/
+	/*background-color: white;*/
+	height: 500px;
+	padding: 0;
+  font-size: 18px;
+  font-style: italic;
+	text-align: justify;
+}
+
+#chariceimg
+{
+	float: right;
+	margin: 0 0 0 20px;
+	height: auto;
+}
+
+.post
+{
+	border-bottom: 1px dotted silver;
+}
+
+.blog
+{
+	border-bottom: 2px solid silver;
+}
+
+#footer
+{
+	clear: both;
+	padding: 5px;
+  text-align: center;
+  font-size: 10px;
+	background-color: #367;
+}
+
