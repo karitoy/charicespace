@@ -1,0 +1,16 @@
+[Script Info]
+; This script was created by subtitleeditor 0.21.1
+; http://kitone.free.fr/subtitleeditor/
+Title: Untitled
+ScriptType: V4.00+
+Collisions: Normal
+Timer: 100
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: sans8outline,Sans,10,&H00FFFFFF,&H0000FFFF,&H000078B4,&H00000000,0,0,0,0,90,90,0,0,1,1,1,2,20,20,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.00,sans8outline,,0000,0000,0000,,- B: Charice, thanks for admitting us to your beautiful home here in Tagaytay. I am happy for everything's that's coming your way anf for everything you and your mother worked for.

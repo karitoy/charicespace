@@ -12,7 +12,7 @@
 		
 			function playVideo(video)
 			{
-				var flashvars = "file=/assets/" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
+				var flashvars = "file=/assets/videos/" + video + "&autostart=true&skin=/assets/stylish/stylish.swf"
 				so.addParam('flashvars',flashvars);
 				so.write('theplayer');
 				return false;
@@ -28,7 +28,7 @@
 
 			function playUserList(list)
 			{
-				var flashvars = "type=playlist&repeat=list&file=/assets/" + list + "&autostart=true&skin=/assets/stylish/stylish.swf"
+				var flashvars = "type=playlist&repeat=list&file=/assets/playlists" + list + "&autostart=true&skin=/assets/stylish/stylish.swf"
 				so.addParam('flashvars',flashvars);
 				so.write('theplayer');
 				return false;
