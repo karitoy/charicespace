@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <playlist version="1" xmlns="http://xspf.org/ns/0/">
     <trackList>
-        <track><location>/videos/admin/tluc1/tluc1intro.flv</location></track>
-        <track><location>/videos/admin/tluc1/tluc1iwaly.flv</location></track>
-        <track><location>/videos/admin/tluc1/tluc1listen.flv</location></track>
-        <track><location>/videos/admin/tluc1/tluc1ihavenothing.flv</location></track>
-        <track><location>/videos/admin/tluc1/tluc1theprayer.flv</location></track>
-        <track><location>/videos/admin/tluc1/tluc1listen2.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1intro.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1iwaly.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1listen.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1ihavenothing.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1theprayer.flv</location></track>
+        <track><location>https://dl.dropboxusercontent.com/u/49292578/charice/tluc1/tluc1listen2.flv</location></track>
     </trackList>
 </playlist>
